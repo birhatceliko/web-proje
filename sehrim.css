@@ -1,0 +1,83 @@
+*{
+
+    background-color: rgb(176, 176, 176);
+}
+
+.anakutu{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;}
+
+    body{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.menü  li{
+    display:block;
+   height: 100%;
+    padding: 25px;
+    background-color: #474545;
+    text-align: center;
+    border: 7px double;
+    border-color: #373636;
+
+}
+.menü{
+    list-style-type: none;
+    margin: 0;        
+    padding: 0;      
+    display: flex; 
+}
+
+.menü li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #474545;
+    text-align: left;
+}
+ .birhatphoto{
+    height: 270px;
+    width: 195px;
+    border: 15px solid;
+    border-color: rgb(26, 44, 79);
+background-color: rgb(26, 44, 79);
+font-size: 9px;
+border-radius: 15px;
+}
+.birhatphoto img{
+     height: 250px;
+    width: 195px;
+    border-radius: 15px;
+}
+.birhatphoto p{
+    padding-top: 1px;
+   background-color: rgb(26, 44, 79);
+    font-style: italic;
+    text-align: center;
+    color: white;
+
+}
+
+
+.hakkında {
+    background-color: transparent; /* Arka planı isteğe göre ayarla */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.menuhakkında {
+    display: flex;
+    flex-direction: column; 
+    flex: 1; /* Sağ tarafın kalan tüm alanı kaplamasını sağlar */
+}
+
+ p{
+    font-weight: 700;
+    font-size: larger;
+    text-indent: 55px;
+    word-spacing: 5px;
+    line-height: 1.6;
+
+ }
