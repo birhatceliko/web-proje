@@ -15,7 +15,7 @@
 
 .menü  li{
     display:block;
-   height: 100%;
+   height: min-height;
     padding: 25px;
     background-color: #474545;
     text-align: center;
@@ -62,7 +62,7 @@ border-radius: 15px;
 
 
 .hakkında {
-    background-color: transparent; /* Arka planı isteğe göre ayarla */
+    background-color: transparent;
     padding: 10px;
     font-family: Arial, sans-serif;
 }
@@ -70,7 +70,7 @@ border-radius: 15px;
 .menuhakkında {
     display: flex;
     flex-direction: column; 
-    flex: 1; /* Sağ tarafın kalan tüm alanı kaplamasını sağlar */
+    flex: 1; 
 }
 
  p{
@@ -81,3 +81,4 @@ border-radius: 15px;
     line-height: 1.6;
 
  }
+
