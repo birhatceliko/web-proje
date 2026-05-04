@@ -82,3 +82,9 @@ border-radius: 15px;
 
  }
 
+.vanspor img{
+    height: 500px;
+    width: 1350px;
+max-width: 100%;
+height: auto;
+}
