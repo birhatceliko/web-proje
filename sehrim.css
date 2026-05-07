@@ -88,3 +88,57 @@ border-radius: 15px;
 max-width: 100%;
 height: auto;
 }
+
+.slider {
+  width: 100%;
+  max-width: 1350px;
+  height: 500px;
+  overflow: hidden; /* Yan yana duran diğer 4 resmi gizler, sadece birini gösterir */
+  position: relative;
+  margin: auto;
+}
+
+/*radyo buton yuvarlaklarını gizleme */
+input[type="radio"] { display: none; }
+
+.resim-seridi {
+  display: flex; /* Resimleri yan yana dizer */
+  width: 500%;   /* 5 resim olduğu için genişliği 5 katına çıkarır */
+  height: 100%;
+  transition: 0.5s; /* Kayma işlemini yumuşak yapar */
+}
+
+.tek-resim {
+  width: 20%; /* Her resim toplam genişliğin tam 5te 1ini kaplar */
+  position: relative;
+}
+
+.tek-resim img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Resim tamamen sığması için */
+}
+
+/* Ok Butonlarının Tasarımı */
+.sol, .sag {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  background: rgba(0,0,0,0.4); /* Yarı şeffaf siyah arka plan */
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+  z-index: 5;
+}
+
+.sol { left: 10px; }
+.sag { right: 10px; }
+
+/*
+   Eğer X numaralı radyo buton seçiliyse, şeridi X kadar sola kaydır. */
+#resim1:checked ~ .resim-seridi { transform: translateX(0); }
+#resim2:checked ~ .resim-seridi { transform: translateX(-20%); }
+#resim3:checked ~ .resim-seridi { transform: translateX(-40%); }
+#resim4:checked ~ .resim-seridi { transform: translateX(-60%); }
+#resim5:checked ~ .resim-seridi { transform: translateX(-80%); }
