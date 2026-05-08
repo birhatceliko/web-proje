@@ -82,12 +82,24 @@ border-radius: 15px;
 
  }
 
+ #vanspor{
+    text-align: center;
+    margin-top: 20px; /* Üstten boşluk*/
+    margin-bottom: 20px; /* Alttan boşluk */
+ }
+
 .vanspor img{
     height: 500px;
     width: 1350px;
 max-width: 100%;
 height: auto;
 }
+
+#memleketim{
+    text-align: center;
+    margin-top: 20px; /* Üstten boşluk */
+    margin-bottom: 20px; /* Alttan boşluk */
+ }
 
 .slider {
   width: 100%;
@@ -142,3 +154,14 @@ input[type="radio"] { display: none; }
 #resim3:checked ~ .resim-seridi { transform: translateX(-40%); }
 #resim4:checked ~ .resim-seridi { transform: translateX(-60%); }
 #resim5:checked ~ .resim-seridi { transform: translateX(-80%); }
+
+.akdamarkilisesi ,.vanmüzesi, .husrev {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Resim tamamen sığması için */
+}
+
+.muradiye1 img {
+  width: 270px;
+  height: 300px;
+}
