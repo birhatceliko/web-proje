@@ -28,7 +28,7 @@
  <div class="hakkında">
  <h1 id="hakkında">HAKKINDA</h1>
  <p>
-    &nbsp;&nbsp;Ben Birhat Çelikok. 18 Haziran 2003 tarihide Van'da doğdum. İlkokul, ortaokul ve liseni bir kısmını Van'da okuduktan sonra İstanbul'a taşındım ve
+    &nbsp;&nbsp;Ben Birhat Çelikok. 18 Haziran 2003 tarihide Van'da doğdum. İlkokul, ortaokul ve lisenin bir kısmını Van'da okuduktan sonra İstanbul'a taşındım ve
      Lisenin yaklaşık iki senesini İstanbulda okudum. Şuan İstanbul'da yaşamaktayım. Film/dizi izlemek, kamp yapmak, futbol oynamak ve izlemek 
     hobilerimin başında geliyor. 
  </p>
@@ -307,4 +307,124 @@ Hz. Meryem ve kucağında Hz. İsa, Hz. Âdem ile Hz. Havva'nın cennetten çık
                 </p>
 
                 <img class="husrev" src="husrevpasa3.png" alt="Hüsrev Paşa Camii">
+
+     <section id="ilgialanlarım">
+    <h1 style="text-align: center; margin-top: 40px;">İLGİ ALANLARIM </h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favori Filmlerim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favori Dizilerim</h2>
+    <div class="apiyanyana">
+        <div id="film-seven" class="filmbütün"></div>
+        <div id="dizi-breakingbad" class="filmbütün"></div>
+    </div>
+    <div class="apiyanyana">
+    <div id="film-schindler" class="filmbütün"></div>
+    <div id="dizi-dexter" class="filmbütün"></div>
+</div>
+<div class="apiyanyana">
+    <div id="film-prestige" class="filmbütün"></div>
+    <div id="dizi-prisonbreak" class="filmbütün"></div>
+</div>
+<div class="apiyanyana">
+    <div id="film-memento" class="filmbütün"></div>
+    <div id="dizi-sherlock" class="filmbütün"></div>
+</div>
+</section>
+
+<script>
+const bilgiSeven = {
+    "Title": "Seven",
+    "Year": "1995",
+    "Genre": "Suç, Dram, Gizem",
+    "Plot": "Kurbanlarını yedi ölümcül günaha göre seçen bir seri katilin hikayesi.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,16,380,562_.jpg",
+    "imdbRating": "8.6"
+};
+
+const bilgiBB = {
+    "Title": "Breaking Bad",
+    "Year": "2008–2013",
+    "Genre": "Suç, Dram, Gerilim",
+    "Plot": "Bir kimya öğretmeninin uyuşturucu dünyasına giriş macerası.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "imdbRating": "9.5"
+};
+
+const bilgiSchindler = {
+    "Title": "Schindler's List",
+    "Year": "1994",
+    "Genre": "Biyografi, Dram, Tarih",
+    "Plot": "II. Dünya Savaşı sırasında Oskar Schindler'in, Naziler tarafından zulüm gören Yahudi işçileri kurtarma çabası.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "imdbRating": "9.0"
+};
+
+const bilgiDexter = {
+    "Title": "Dexter",
+    "Year": "2006–2013",
+    "Genre": "Suç, Dram, Gizem",
+    "Plot": "Zeki ve sevimli Dexter Morgan, gündüzleri adli tıp uzmanı, geceleri ise bir seri katildir.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ3YmQ4YzMtOTkyZC00YmM5LThhZjEtM2E0MjFkNTc0OGJhXkEyXkFqcGc@._V1_SX300.jpg",
+    "imdbRating": "8.6"
+};
+ 
+const bilgiPrestige = {
+    "Title": "The Prestige",
+    "Year": "2006",
+    "Genre": "Dram, Gizem, Bilim Kurgu",
+    "Plot": "İki sihirbazın birbirini alt etmek için girdikleri takıntılı ve trajik rekabetin hikayesi.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTM3MzQ5MjQ5OF5BMl5BanBnXkFtZTcwMTQ3NzMzMw@@._V1_QL75_UY562_CR0,0,380,562_.jpg",
+    "imdbRating": "8.5"
+};
+
+const bilgiPrisonBreak = {
+    "Title": "Prison Break",
+    "Year": "2005–2017",
+    "Genre": "Aksiyon, Suç, Dram",
+    "Plot": "Kardeşini hapisten kurtarmak için vücuduna hapishane planını dövmeleten bir dâhinin hikayesi.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMTg3NTkwNzAxOF5BMl5BanBnXkFtZTcwMjM1NjI5MQ@@._V1_SX300.jpg",
+    "imdbRating": "8.3"
+};
+
+const bilgiMemento = {
+    "Title": "Memento",
+    "Year": "2001",
+    "Genre": "Dram, Gizem, Gerilim",
+    "Plot": "Kısa süreli hafıza kaybı yaşayan bir adamın, karısının katilini bulmak için vücuduna kazıdığı notlarla verdiği mücadele.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ3Y2Q4NjktN2E4Ny00Y2Q2LTliZDUtZTNiNjRhY2I0NGIyXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "imdbRating": "8.4"
+};
+
+const bilgiSherlock = {
+    "Title": "Sherlock",
+    "Year": "2010–2017",
+    "Genre": "Suç, Dram, Gizem",
+    "Plot": "Günümüz Londra'sında, dahi dedektif Sherlock Holmes ve ortağı Dr. Watson'ın modern suçları çözme maceraları.",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNTQzNGZjNDEtOTMwYi00MzFjLWE2ZTYtYzYxYzMwMjZkZDc5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "imdbRating": "9.0"
+};
+
+function kartOlustur(veri, elementId) {
+    const hedef = document.getElementById(elementId);
+    hedef.innerHTML = `
+        <img src="${veri.Poster}" alt="${veri.Title}">
+        <div class="filmdetay">
+            <h2>${veri.Title} (${veri.Year})</h2>
+            <p><strong>Tür:</strong> ${veri.Genre}</p>
+            <p><strong>Özet:</strong> ${veri.Plot}</p>
+            <span class="puan">⭐ IMDb: ${veri.imdbRating}</span>
+        </div>
+    `;
+}
+
+window.onload = function() {
+    kartOlustur(bilgiSeven, 'film-seven');
+    kartOlustur(bilgiBB, 'dizi-breakingbad');
+    kartOlustur(bilgiSchindler, 'film-schindler');
+    kartOlustur(bilgiDexter, 'dizi-dexter');
+    kartOlustur(bilgiPrestige, 'film-prestige');
+    kartOlustur(bilgiPrisonBreak, 'dizi-prisonbreak');
+    kartOlustur(bilgiMemento, 'film-memento');
+    kartOlustur(bilgiSherlock, 'dizi-sherlock');
+};
+</script>
+
 </body>
