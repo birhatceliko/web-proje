@@ -9,6 +9,10 @@
   
 </head>
 <body>
+    
+
+
+    
   <div class="anakutu">  
     
        <div class="birhatphoto">
@@ -23,6 +27,19 @@
  <li><a href="#memleketim">Memleketim</a></li>
  <li><a href="#ilgialanlarım">İlgi Alanlarım</a></li>
  <li><a href="#iletişim">İletişim</a></li>
+ <li style="position: relative;">
+    <a href="javascript:void(0)" onclick="loginGoster()">Login</a>
+    <div id="loginPanel" class="kucuk-login-paneli">
+        <form action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Öğrenci Maili" required>
+            <input type="password" name="password" placeholder="Şifre" required>
+            <div class="butonlar">
+                <button type="submit">Giriş</button>
+                <button type="button" onclick="loginKapat()" class="iptal">X</button>
+            </div>
+        </form>
+    </div>
+</li>
 </ul>   
   
  <div class="hakkında">
@@ -427,4 +444,19 @@ window.onload = function() {
 };
 </script>
 
+
+<script>
+    function loginGoster() {
+    var panel = document.getElementById("loginPanel");
+    if (panel.style.display === "block") {
+        panel.style.display = "none";
+    } else {
+        panel.style.display = "block";
+    }
+}
+
+function loginKapat() {
+    document.getElementById("loginPanel").style.display = "none";
+}
+</script>
 </body>
