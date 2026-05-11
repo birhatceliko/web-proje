@@ -236,48 +236,4 @@ input[type="radio"] { display: none; }
     }
 }
 
-.kucuk-login-paneli {
-    display: none; 
-    position: absolute;
-    left: 105%; /* Butonun hemen sağından başlar */
-    top: 0;
-    width: 250px;
-    background-color: #373636; 
-    border: 3px double #fff;
-    padding: 10px;
-    z-index: 999;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-}
 
-.kucuk-login-paneli input {
-    width: 90%;
-    margin-bottom: 8px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    background: #fff;
-    font-size: 12px;
-}
-
-.kucuk-login-paneli .butonlar {
-    display: flex;
-    gap: 5px;
-    background: transparent;
-}
-
-.kucuk-login-paneli button {
-    flex: 1;
-    padding: 5px;
-    cursor: pointer;
-    background-color: #1a2c4f;
-    color: white;
-    border: none;
-    font-size: 12px;
-}
-
-.kucuk-login-paneli .iptal {
-    background-color: #8b0000;
-    max-width: 30px;
-}
-
-/* Arka plan renginin inputları etkilememesi için */
-.kucuk-login-paneli form { background: transparent; }
