@@ -432,4 +432,82 @@ window.onload = function() {
 </script>
 
 
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<section id="iletişim">
+    <div class="form-container" id="vue-app">
+        <div class="form-header">İLETİŞİM FORMU</div>
+        
+        <form id="contactForm" action="iletisim.php" method="POST" class="form-body">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Ad Soyad:</label>
+                    <input type="text" name="adsoyad" id="adsoyad">
+                </div>
+                <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Telefon:</label>
+                    <input type="text" name="telefon" id="tel">
+                </div>
+                <div class="form-group">
+                    <label>Konu:</label>
+                    <input type="text" name="konu" id="konu">
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Mesajınız:</label>
+                <textarea name="mesaj" id="mesaj" rows="3"></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn-orange" onclick="jsKontrol()">JS ile Denetle & Gönder</button>
+                
+                <button type="button" class="btn-green" @click="validateVue">Vue.js ile Denetle & Gönder</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+// 1. Standart JS Kontrolü
+function jsKontrol() {
+    const ad = document.getElementById('adsoyad').value;
+    const tel = document.getElementById('tel').value;
+    
+    if (ad === "" || tel === "") {
+        alert("Ad Soyad ve Telefon boş bırakılamaz! (JS)");
+    } else if (isNaN(tel)) {
+        alert("Telefon alanına sadece sayı giriniz!");
+    } else {
+        document.getElementById('contactForm').submit();
+    }
+}
+
+// 2. Vue.js Kontrolü
+const { createApp } = Vue;
+createApp({
+    methods: {
+        validateVue() {
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                alert("Lütfen geçerli bir e-posta adresi girin! (Vue.js)");
+            } else {
+                alert("Doğrulama başarılı, form gönderiliyor...");
+                document.getElementById('contactForm').submit();
+            }
+        }
+    }
+}).mount('#vue-app'); 
+</script>
 </body>
+</html>
