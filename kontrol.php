@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // HATALI: Hata mesajı ver ve giriş sayfasına geri gönder
         echo "<script>
                 alert('Hatalı kullanıcı adı veya şifre!');
-                window.location.href = 'ana.php';
+                window.location.href = 'index.php';
               </script>";
     }
 }

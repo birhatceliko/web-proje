@@ -15,8 +15,8 @@
     <div class="login-box">
         <h2>SİTEYE GİRİŞ</h2>
         <form action="kontrol.php" method="POST">
-            <input type="email" name="email" placeholder="Öğrenci Maili (b24...)" required>
-            <input type="password" name="password" placeholder="Şifre (Öğrenci No)" required>
+            <input type="email" name="email" placeholder="Öğrenci Maili" required>
+            <input type="password" name="password" placeholder="Şifre" required>
             <button type="submit">GİRİŞ YAP</button>
         </form>
     </div>

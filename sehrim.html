@@ -314,7 +314,7 @@ Hz. Meryem ve kucağında Hz. İsa, Hz. Âdem ile Hz. Havva'nın cennetten çık
 
      <section id="ilgialanlarım">
     <h1 style="text-align: center; margin-top: 40px;">İLGİ ALANLARIM </h1>
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favori Filmlerim &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favori Dizilerim</h2>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favori Filmlerim ve Dizilerim</h2>
     <div class="apiyanyana">
         <div id="film-seven" class="filmbütün"></div>
         <div id="dizi-breakingbad" class="filmbütün"></div>
@@ -405,7 +405,7 @@ const bilgiSherlock = {
     "Poster": "https://m.media-amazon.com/images/M/MV5BNTQzNGZjNDEtOTMwYi00MzFjLWE2ZTYtYzYxYzMwMjZkZDc5XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
     "imdbRating": "9.0"
 };
-
+// Dinamik HTML kartı oluşturan fonksiyon
 function kartOlustur(veri, elementId) {
     const hedef = document.getElementById(elementId);
     hedef.innerHTML = `
@@ -418,7 +418,7 @@ function kartOlustur(veri, elementId) {
         </div>
     `;
 }
-
+// Sayfa yüklendiğinde kartları bastır
 window.onload = function() {
     kartOlustur(bilgiSeven, 'film-seven');
     kartOlustur(bilgiBB, 'dizi-breakingbad');
@@ -436,38 +436,38 @@ window.onload = function() {
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <section id="iletişim">
-    <div class="form-container" id="vue-app">
-        <div class="form-header">İLETİŞİM FORMU</div>
+    <div class="formkutu" id="vue-app">
+        <div class="formbaslık">İLETİŞİM FORMU</div>
         
-        <form id="contactForm" action="iletisim.php" method="POST" class="form-body">
-            <div class="form-row">
-                <div class="form-group">
+        <form id="contactForm" action="iletisim.php" method="POST" class="formbody">
+            <div class="formrow">
+                <div class="formgrup">
                     <label>Ad Soyad:</label>
                     <input type="text" name="adsoyad" id="adsoyad">
                 </div>
-                <div class="form-group">
+                <div class="formgrup">
                     <label>E-mail:</label>
                     <input type="email" name="email" id="email">
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
+            <div class="formrow">
+                <div class="formgrup">
                     <label>Telefon:</label>
                     <input type="text" name="telefon" id="tel">
                 </div>
-                <div class="form-group">
+                <div class="formgrup">
                     <label>Konu:</label>
                     <input type="text" name="konu" id="konu">
                 </div>
             </div>
 
-            <div class="form-group full-width">
+            <div class="formgrup full-width">
                 <label>Mesajınız:</label>
                 <textarea name="mesaj" id="mesaj" rows="3"></textarea>
             </div>
 
-            <div class="btn-group">
+            <div class="btngrup">
                 <button type="button" class="btn-orange" onclick="jsKontrol()">JS ile Denetle & Gönder</button>
                 
                 <button type="button" class="btn-green" @click="validateVue">Vue.js ile Denetle & Gönder</button>
@@ -477,17 +477,18 @@ window.onload = function() {
 </section>
 
 <script>
-// 1. Standart JS Kontrolü
+
+// JavaScript ile Form Kontrolü
 function jsKontrol() {
-    const ad = document.getElementById('adsoyad').value;
-    const tel = document.getElementById('tel').value;
+    const ad = document.getElementById('adsoyad').value;// Input değerini al
+    const tel = document.getElementById('tel').value; 
     
     if (ad === "" || tel === "") {
-        alert("Ad Soyad ve Telefon boş bırakılamaz! (JS)");
+        alert("Ad Soyad ve Telefon boş bırakılamaz! (JS)"); // boşluk kontrolü
     } else if (isNaN(tel)) {
         alert("Telefon alanına sadece sayı giriniz!");
     } else {
-        document.getElementById('contactForm').submit();
+        document.getElementById('contactForm').submit();   // Formu gönder
     }
 }
 
@@ -497,7 +498,7 @@ createApp({
     methods: {
         validateVue() {
             const email = document.getElementById('email').value;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // E-posta formatı kontrolü
             
             if (!emailRegex.test(email)) {
                 alert("Lütfen geçerli bir e-posta adresi girin! (Vue.js)");
@@ -507,7 +508,7 @@ createApp({
             }
         }
     }
-}).mount('#vue-app'); 
+}).mount('#vue-app'); // Vue'yu ilgili div'e bağlar
 </script>
 </body>
 </html>
